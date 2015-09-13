@@ -1,3 +1,5 @@
+par(bg = 'white')
+
 data <- read.csv2('household_power_consumption.txt', na.strings = '?', stringsAsFactors= F)
 gap <- data[data$Date == '1/2/2007' | data$Date == '2/2/2007',c(1,2, 7:9)]
 gap$Date <- paste(gap$Date,gap$Time, sep = " ")
